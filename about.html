@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Tejal's Portfolio</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#00d4ff',
+            dark: '#1e1e2f',
+            muted: '#7f8c8d',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @keyframes scaleIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .animate-scaleIn {
+      animation: scaleIn 0.3s ease-out forwards;
+    }
+  </style>
+</head>
+
+<body class="bg-dark text-white font-sans overflow-x-hidden">
+
+  <!-- Sidebar -->
+  <aside class="w-64 bg-gray-800 text-white p-6 hidden md:block fixed h-full left-0 top-0">
+    <h2 class="text-2xl font-bold text-primary mb-8">Tejal</h2>
+    <nav class="flex flex-col gap-4 text-lg">
+      <a href="index.html" class="hover:text-primary">🏠 Home</a>
+      <a href="about.html" class="text-primary font-semibold">🙋‍♀️ About</a>
+      <a href="project.html" class="hover:text-primary">🛠 Projects</a>
+      <a href="contact.html" class="hover:text-primary">📬 Contact</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="md:ml-64 p-8 w-full min-h-screen">
+    <h1 class="text-3xl font-bold mb-6">About Me</h1>
+
+    <!-- Summary Section -->
+    <div class="mb-10 text-lg text-gray-300 space-y-4 max-w-4xl">
+      <p>
+        I'm Tejal Apraj, a passionate and curious learner currently pursuing my Master’s in Computer
+        Applications. With a strong foundation in web development, I specialize in creating engaging front-end
+        experiences using HTML, CSS, JavaScript, and React. I love crafting visually appealing, user-friendly
+        interfaces that blend design with functionality.
+      </p>
+      <p>
+        Beyond academics, I enjoy exploring UI/UX design trends, working on personal projects, and constantly
+        upskilling. I’m also passionate about creativity — from editing visuals to reading tech blogs and tuning
+        into music that inspires me. My goal is to grow as a front-end developer and contribute to innovative
+        digital experiences.
+      </p>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="grid md:grid-cols-3 gap-6 max-w-6xl">
+      <!-- Education Card -->
+      <button onclick="openModal('educationModal')"
+        class="w-full bg-[#2C3E50] p-6 rounded-2xl shadow-lg cursor-pointer hover:scale-105 transform transition focus:outline-none focus:ring-2 focus:ring-cyan-400 text-left">
+        <h3 class="text-xl font-semibold">🎓 Education</h3>
+        <p>Tap to view details</p>
+      </button>
+
+      <!-- Skills Card -->
+      <button onclick="openModal('skillsModal')"
+        class="w-full bg-[#2C3E50] p-6 rounded-2xl shadow-lg cursor-pointer hover:scale-105 transform transition focus:outline-none focus:ring-2 focus:ring-cyan-400 text-left">
+        <h3 class="text-xl font-semibold mb-2">🛠️ Skills</h3>
+        <p>Click to view technologies I know</p>
+      </button>
+
+      <!-- Hobbies Card -->
+      <button onclick="openModal('hobbiesModal')"
+        class="w-full bg-[#2C3E50] p-6 rounded-2xl shadow-lg cursor-pointer hover:scale-105 transform transition focus:outline-none focus:ring-2 focus:ring-cyan-400 text-left">
+        <h3 class="text-xl font-semibold mb-2">🎯 Hobbies</h3>
+        <p>Click to explore my interests</p>
+      </button>
+    </div>
+  </main>
+
+  <!-- Education Modal -->
+  <div id="educationModal" class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black bg-opacity-70">
+    <div class="bg-[#34495E] text-white p-6 rounded-2xl w-[90%] max-w-lg shadow-xl relative">
+      <h2 class="text-2xl font-bold mb-4">🎓 Education</h2>
+      <ul class="space-y-2">
+        <li><strong>MCA</strong> - Guru Nanak Institute of Management Studies (2024–2026)</li>
+        <li><strong>BSc (IS)</strong> - D.G. Ruparel College (2020–2023)</li>
+        <li><strong>HSC</strong> - SIWS College (2018–2020)</li>
+        <li><strong>SSC</strong> - Auxilium Convent High School (2017–2018)</li>
+      </ul>
+      <button onclick="closeModal('educationModal')"
+        class="absolute top-2 right-2 text-white hover:text-red-400 text-2xl">&times;</button>
+    </div>
+  </div>
+
+  <!-- Skills Modal -->
+  <div id="skillsModal" class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black bg-opacity-70">
+    <div class="bg-[#34495E] text-white p-6 rounded-2xl w-[90%] max-w-lg shadow-xl relative">
+      <h2 class="text-2xl font-bold mb-4">🛠️ Skills</h2>
+      <div class="grid grid-cols-3 gap-4 text-center">
+        <div><span class="text-3xl">🌐</span>
+          <p>HTML</p>
+        </div>
+        <div><span class="text-3xl">🎨</span>
+          <p>CSS</p>
+        </div>
+        <div><span class="text-3xl">⚛️</span>
+          <p>React</p>
+        </div>
+        <div><span class="text-3xl">🐍</span>
+          <p>Python</p>
+        </div>
+        <div><span class="text-3xl">☕</span>
+          <p>Java</p>
+        </div>
+        <div><span class="text-3xl">📝</span>
+          <p>JavaScript</p>
+        </div>
+      </div>
+      <button onclick="closeModal('skillsModal')"
+        class="absolute top-2 right-2 text-white hover:text-red-400 text-2xl">&times;</button>
+    </div>
+  </div>
+
+  <!-- Hobbies Modal -->
+  <div id="hobbiesModal" class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black bg-opacity-70">
+    <div class="bg-[#34495E] text-white p-6 rounded-2xl w-[90%] max-w-lg shadow-xl relative">
+      <h2 class="text-2xl font-bold mb-4">🎯 Hobbies</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>🎨 UI/UX Designing</li>
+        <li>📚 Reading Blogs & Tech Articles</li>
+        <li>📷 Creative Editing</li>
+        <li>🎧 Listening to Music</li>
+      </ul>
+      <button onclick="closeModal('hobbiesModal')"
+        class="absolute top-2 right-2 text-white hover:text-red-400 text-2xl">&times;</button>
+    </div>
+  </div>
+
+  <!-- Modal Script -->
+  <script>
+    function openModal(id) {
+      document.getElementById(id).classList.remove("hidden");
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.add("hidden");
+    }
+  </script>
+
+</body>
+
+</html>

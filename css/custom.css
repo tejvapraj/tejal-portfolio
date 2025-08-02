@@ -1,0 +1,10 @@
+/* custom.css */
+.popout-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.popout-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.2);
+}

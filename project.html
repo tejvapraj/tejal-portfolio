@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Tejal Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #1e1e2f;
+      color: #ecf0f1;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+    }
+    .modal {
+      display: none;
+    }
+    .modal.active {
+      display: flex;
+    }
+  </style>
+</head>
+<body class="flex min-h-screen">
+
+  <!-- Sidebar -->
+  <aside class="bg-[#2c3e50] w-64 p-6 fixed h-full">
+    <div class="text-2xl font-bold text-[#00d4ff] text-center mb-10">Tejal</div>
+    <nav class="space-y-4 text-white">
+      <a href="index.html" class="block hover:text-[#00d4ff]">Home</a>
+      <a href="about.html" class="block hover:text-[#00d4ff]">About</a>
+      <a href="project.html" class="block text-[#00d4ff] font-semibold">Projects</a>
+      <a href="contact.html" class="block hover:text-[#00d4ff]">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="ml-64 p-10 w-full">
+    <h1 class="text-4xl font-bold mb-8 text-[#00d4ff]">My Projects</h1>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Project Card 1 -->
+      <div class="bg-[#2c3e50] rounded-2xl p-6 transition transform duration-300 card">
+        <h2 class="text-xl font-semibold text-[#00d4ff] mb-2">AI-Powered Resume Screening</h2>
+        <p class="text-[#bdc3c7] mb-4">Compares resumes with job descriptions using NLP.</p>
+        <button onclick="openModal('modal1')" class="text-sm text-[#00d4ff] hover:underline">View Project</button>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="bg-[#2c3e50] rounded-2xl p-6 transition transform duration-300 card">
+        <h2 class="text-xl font-semibold text-[#00d4ff] mb-2">Smart Calculator</h2>
+        <p class="text-[#bdc3c7] mb-4">Multi-functional calculator with modern UI.</p>
+        <button onclick="openModal('modal2')" class="text-sm text-[#00d4ff] hover:underline">View Project</button>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="bg-[#2c3e50] rounded-2xl p-6 transition transform duration-300 card">
+        <h2 class="text-xl font-semibold text-[#00d4ff] mb-2">Smart To-Do List</h2>
+        <p class="text-[#bdc3c7] mb-4">Task management app with reminders and charts.</p>
+        <button onclick="openModal('modal3')" class="text-sm text-[#00d4ff] hover:underline">View Project</button>
+      </div>
+
+    </div>
+  </main>
+
+<!-- Modal 1 Example -->
+<div id="modal1" class="modal fixed inset-0 bg-gray-900 bg-opacity-60 flex justify-center items-center z-50">
+  <div class="bg-white text-gray-800 p-8 rounded-xl max-w-xl w-full relative shadow-xl">
+    <button onclick="closeModal('modal1')" class="absolute top-2 right-4 text-2xl text-[#00d4ff] hover:text-white transition">&times;</button>
+    <h2 class="text-2xl font-bold text-[#00d4ff] mb-4">AI-Powered Resume Screening</h2>
+    
+    <!-- Screenshot -->
+    <img src="images/resume-ai.png" alt="Resume Screening App" class="rounded-xl mb-4 border border-[#00d4ff] shadow-lg">
+
+    <!-- Description -->
+    <p class="mb-2">An intelligent system that compares resumes against a job description using NLP and highlights the best match.</p>
+      <ul class="list-disc ml-5 mb-3">
+        <li>Uploads 2 resumes + 1 JD</li>
+        <li>Shows match % with visuals</li>
+        <li>Identifies better-fit resume</li>
+        <li>Downloadable comparison report</li>
+      </ul>
+      <p class="text-sm text-gray-400">Tech: Python, Streamlit, PyPDF2, NLTK, Matplotlib</p>
+
+    <!-- Buttons -->
+    <div class="flex gap-4">
+      <a href="https://github.com/tejvapraj/Ai-Powerd-Resume-Screening.git" target="_blank" class="bg-[#00d4ff] text-[#2c3e50] px-4 py-2 rounded-md font-semibold hover:bg-white transition">GitHub</a>
+      <a href="hhttps://tejal-ai-powerd-resume-screening-10.streamlit.app/" target="_blank" class="bg-[#00d4ff] text-[#2c3e50] px-4 py-2 rounded-md font-semibold hover:bg-white transition">Live Demo</a>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal 2 -->
+<div id="modal2" class="modal fixed inset-0 bg-black bg-opacity-60 justify-center items-center z-50">
+  <div class="bg-white text-gray-800 p-8 rounded-xl max-w-xl w-full relative shadow-xl">
+    <button onclick="closeModal('modal2')" class="absolute top-2 right-4 text-2xl text-[#00d4ff]">&times;</button>
+    <h2 class="text-2xl font-bold text-[#00d4ff] mb-4">Smart Calculator</h2>
+    <img src="images/calculator.png" alt="Smart Calculator" class="rounded-xl mb-4 border border-[#00d4ff]" />
+    <p class="mb-2">A responsive, multi-purpose calculator with various tools like BMI, age, percentage, and dark mode.</p>
+      <ul class="list-disc ml-5 mb-3">
+        <li>Includes BMI, Age, % Calculator</li>
+        <li>Dark Mode UI</li>
+        <li>Fully responsive</li>
+      </ul>
+      <p class="text-sm text-gray-400">Tech: HTML, Tailwind CSS, JavaScript</p>
+     <!-- Buttons -->
+    <div class="flex gap-4">
+      <a href="https://github.com/tejvapraj/calculator-website.git" target="_blank" class="bg-[#00d4ff] text-[#2c3e50] px-4 py-2 rounded-md font-semibold hover:bg-white transition">GitHub</a>
+      <a href="https://tejalapraj-calculator-suite.netlify.app/" target="_blank" class="bg-[#00d4ff] text-[#2c3e50] px-4 py-2 rounded-md font-semibold hover:bg-white transition">Live Demo</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal 3 -->
+<div id="modal3" class="modal fixed inset-0 bg-black bg-opacity-60 justify-center items-center z-50">
+  <div class="bg-white text-gray-800 p-8 rounded-xl max-w-xl w-full relative shadow-xl">
+    <button onclick="closeModal('modal3')" class="absolute top-2 right-4 text-2xl text-[#00d4ff]">&times;</button>
+    <h2 class="text-2xl font-bold text-[#00d4ff] mb-4">Smart To-Do List</h2>
+    <img src="images/To_do.png" alt="To-Do List App" class="rounded-xl mb-4 border border-[#00d4ff]" />
+   <p class="mb-2">A productivity tool that helps users manage tasks, visualize completion, and stay organized.</p>
+      <ul class="list-disc ml-5 mb-3">
+        <li>Task add/edit/delete + reminders</li>
+        <li>Visual task stats (charts)</li>
+        <li>Toast notifications</li>
+      </ul>
+      <p class="text-sm text-gray-400">Tech: JavaScript, Chart.js, HTML/CSS</p>
+    
+        <div class="flex gap-4">
+      <a href="https://github.com/tejvapraj/Smart-To-Do-App.git" target="_blank" class="bg-[#00d4ff] text-[#2c3e50] px-4 py-2 rounded-md font-semibold hover:bg-white transition">GitHub</a>
+      <a href="https://tejal-smart-todo.netlify.app/" target="_blank" class="bg-[#00d4ff] text-[#2c3e50] px-4 py-2 rounded-md font-semibold hover:bg-white transition">Live Demo</a>
+    </div>
+  </div>
+</div>
+
+  <!-- Scripts -->
+  <script>
+    function openModal(id) {
+      document.getElementById(id).classList.add('active');
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('active');
+    }
+  </script>
+</body>
+</html>

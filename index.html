@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tejal's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body class="bg-gray-900 text-white font-sans">
+
+    <div class="flex min-h-screen">
+
+        <!-- Sidebar -->
+        <aside class="w-64 bg-gray-800 text-white p-6 hidden md:block fixed h-full">
+            <h2 class="text-2xl font-bold text-primary mb-8">Tejal</h2>
+            <nav class="flex flex-col gap-4 text-lg">
+                <a href="index.html" class="hover:text-primary">🏠 Home</a>
+                <a href="about.html" class="hover:text-primary">🙋‍♀️ About</a>
+                <a href="project.html" class="hover:text-primary">🛠 Projects</a>
+                <a href="contact.html" class="hover:text-primary">📬 Contact</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="ml-0 md:ml-64 p-8 w-full">
+            <div class="text-center mt-12">
+                <!-- Profile Image -->
+                <img src="images/PProfile.jpg" alt="Tejal"
+                    class="w-40 h-40 mx-auto rounded-full border-4 border-primary shadow-lg" />
+
+                <h1 class="text-4xl font-bold mt-6">Hi, I'm <span class="text-primary">Tejal Apraj</span></h1>
+                <p class="text-muted text-xl mt-2">Front-End Developer | Creative Coder | MCA Student</p>
+                <p class="italic text-gray-400 mt-2">Turning ideas into <span
+                        class="font-semibold typing text-primary"></span></p>
+
+                <!-- CTA Buttons -->
+                <div class="flex justify-center mt-6 gap-4">
+                    <a href="assets/Tejal-Resume.pdf"
+                        class="bg-primary text-dark px-6 py-2 rounded-full font-semibold hover:bg-cyan-400 transition"
+                        download>📄 Download Resume</a>
+                    <a href="project.html"
+                        class="border-2 border-primary text-primary px-6 py-2 rounded-full font-semibold hover:bg-primary hover:text-dark transition">🚀
+                        View Projects</a>
+                </div>
+
+                <!-- Skill Icons -->
+                <div class="flex justify-center mt-8 gap-6">
+                    <!-- HTML -->
+                    <div class="text-center">
+                        <div class="p-4 rounded-full bg-gray-700 hover:scale-110 transition">
+                            <i class="fab fa-html5 text-orange-500 text-3xl"></i>
+                        </div>
+                        <p class="mt-2 text-sm">HTML</p>
+                    </div>
+
+                    <!-- CSS -->
+                    <div class="text-center">
+                        <div class="p-4 rounded-full bg-gray-700 hover:scale-110 transition">
+                            <i class="fab fa-css3-alt text-blue-500 text-3xl"></i>
+                        </div>
+                        <p class="mt-2 text-sm">CSS</p>
+                    </div>
+
+                    <!-- JavaScript -->
+                    <div class="text-center">
+                        <div class="p-4 rounded-full bg-gray-700 hover:scale-110 transition">
+                            <i class="fab fa-js text-yellow-400 text-3xl"></i>
+                        </div>
+                        <p class="mt-2 text-sm">JavaScript</p>
+                    </div>
+
+                    <!-- React -->
+                    <div class="text-center">
+                        <div class="p-4 rounded-full bg-gray-700 hover:scale-110 transition">
+                            <i class="fab fa-react text-cyan-400 text-3xl"></i>
+                        </div>
+                        <p class="mt-2 text-sm">React</p>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+    </main>
+
+    </div>
+
+    <!-- Typewriter JS -->
+    <script>
+        const words = ["interactive websites.", "modern UIs.", "clean code."];
+        let i = 0, j = 0, currentWord = "", isDeleting = false;
+
+        function type() {
+            if (i < words.length) {
+                if (!isDeleting && j <= words[i].length) {
+                    currentWord = words[i].substring(0, j++);
+                } else if (isDeleting && j >= 0) {
+                    currentWord = words[i].substring(0, j--);
+                }
+
+                document.querySelector(".typing").textContent = currentWord;
+
+                if (j === words[i].length) isDeleting = true;
+                if (isDeleting && j === 0) {
+                    isDeleting = false;
+                    i = (i + 1) % words.length;
+                }
+
+                setTimeout(type, isDeleting ? 50 : 100);
+            }
+        }
+
+        type();
+    </script>
+
+</body>
+
+</html>
